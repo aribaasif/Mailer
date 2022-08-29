@@ -1,0 +1,48 @@
+.bootstrap-tagsinput{
+    width: 100%;
+    background-color: #e8e5e5;
+}
+.label-info{
+    background-color: #ec6d00;
+
+}
+.label {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,
+    border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.dropzone {
+    border: 1px dashed #e9ecef; }
+.dropzone .dz-message {
+    padding: 5% 0;
+    margin: 0px; }
+.logo{
+    width: 80px;
+    height: 80px;
+}
+.OrangeFont{
+    color: #ec6d00;
+}
+.OrangeBackground{
+    background-color: #ec6d00;
+}
+.bold{
+    font-weight: bold;
+}
+.radiostyling{
+    background-color: #e8e5e5; 
+    border-radius: 5px; 
+    border-color: black;
+}
+.radioclass{
+    background-color: #e8e5e5;
+}

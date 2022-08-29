@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMTP Server</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css.map">
+    <link rel="stylesheet" href="/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.rtl.css.map">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css.map">
+    <link rel="stylesheet" href="/css/bootstrap-grid.rtl.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.rtl.min.css.map">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.css.map">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/lib/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="/lib/dropzone-5.7.0/dist/dropzone.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body  onload="defaultFn();">
+      <br>
+      <img src="/images/nedlogo.png" class="rounded mx-auto d-block logo" alt="NED LOGO">
+      <br>
+      <h5 class="OrangeFont text-center mx-auto" style="width: 240px;"><b>Non Scheduled Emails</b></h5>
+      <br>
+      <div class="container">
+          <%- body %>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g==" crossorigin="anonymous"></script>
+    <script src="/lib/summernote/summernote-bs4.min.js"></script>
+    <script src="/lib/dropzone-5.7.0/dist/dropzone.js"></script>
+    <script src="../routes/email.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#email_template').summernote({
+        height: 350
+    });
+});
+    </script>
+</body>
+</html>

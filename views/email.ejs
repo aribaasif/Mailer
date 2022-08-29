@@ -1,0 +1,139 @@
+<div>
+  <div class="mb-2 row">
+    <label for="exampleFormControlTextarea1" class="form-label col-sm-2 bold">To: <b style="color: red;">*</b></label>
+    <div class="col-sm-10">
+      <input class="form-control" type="email" data-role="tagsinput" name="emailto" id="emailto"
+        placeholder="Enter Email Address">
+    </div>
+  </div>
+  <div class="mb-1 row">
+    <label for="inputPassword" class="bold col-sm-2 col-form-label">Database:</label>
+    <div class="col-sm-10">
+      <select id="databases" class="form-select form-select-sm" style="background-color: #e8e5e5;"
+        aria-label=".form-select-sm example">
+        <option value="" selected>Select (Any One)</option>
+        <% for(var i=0; i < databases.length; i++) { %>
+          <option id="<% databases[i].DATABASE_ID %>" value="<%= databases[i].DATABASE_ID %>">
+            <%= databases[i].DATABASE_NAME %>
+          </option>
+          <% } %>
+      </select>
+    </div>
+  </div>
+  <div class="mb-1 row">
+    <label for="inputPassword" class="bold col-sm-2 col-form-label">Members: <b style="color: red;">*</b></label>
+    <div class="col-sm-10">
+      <select id="category" name="Category" onchange="CategoryFn()" class="form-select form-select-sm"
+        style="background-color: #e8e5e5;" aria-label=".form-select-sm example">
+        <option value=" " selected>Select Category</option>
+        <% for(var i=0; i < categories.length; i++) { %>
+          <option id="<%= categories[i].CATEGORY_ID %>" value="<%= categories[i].CATEGORY_ID %>">
+            <%= categories[i].CATEGORY_NAME %>
+          </option>
+          <% } %>
+      </select>
+    </div>
+  </div>
+  <div class="mb-1 row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+      <select id="batch" name="Batch" class="form-select form-select-sm" style="background-color: #e8e5e5;"
+        aria-label=".form-select-sm example">
+        <option value=" " selected>Select Batch</option>
+        <% for(var i=0; i < batch.length; i++) { %>
+          <option id="<%= batch[i].BATCH_ID %>" value="<%= batch[i].BATCH_ID %>">
+            <%= batch[i].BATCH_YEAR %>
+          </option>
+          <% } %>
+      </select>
+    </div>
+  </div>
+  <div class="mb-1 row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+      <select id="designation" name="designation" class="form-select form-select-sm" style="background-color: #e8e5e5;"
+        aria-label=".form-select-sm example">
+        <option value=" " selected>Select Designation</option>
+        <% for(var i=0; i < designations.length; i++) { %>
+          <option id="<%= designations[i].DESIGNATION_ID %>" value="<%= designations[i].DESIGNATION_ID %>">
+            <%= designations[i].DESIGNATION_NAME %>
+          </option>
+          <% } %>
+      </select>
+    </div>
+  </div>
+  <div class="mb-2 row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+      <select id="department" name="Department" class="form-select form-select-sm" style="background-color: #e8e5e5;"
+        aria-label=".form-select-sm example">
+        <option value=" " selected>Select Department</option>
+        <% for(var i=0; i < departments.length; i++) { %>
+          <option id="<%= departments[i].DEPARTMENT_ID %>" value="<%= departments[i].DEPARTMENT_ID %>">
+            <%= departments[i].DEPARTMENT_NAME %>
+          </option>
+          <% } %>
+
+      </select>
+    </div>
+  </div>
+  <div class="mb-2 row">
+    <label for="exampleFormControlInput1" class="form-label col-sm-2 bold">From:</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" style="background-color: #e8e5e5;" id="fromemail"
+        placeholder="neduet.edu.pk1@gmail.com" value="neduet.edu.pk1@gmail.com" readonly>
+    </div>
+  </div>
+  <div class="mb-2 row">
+    <label for="exampleFormControlInput1" class="form-label col-sm-2 bold">CC:</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="email" data-role="tagsinput" name="emailCC" id="emailCC"
+        placeholder="Enter Email Address">
+    </div>
+  </div>
+  <div class="mb-2 row">
+    <label for="exampleFormControlInput1" class="form-label col-sm-2 bold">Subject: <b style="color: red;">*</b></label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" style="background-color: #e8e5e5;" id="subject" name="subject"
+        placeholder="Enter Subject">
+    </div>
+  </div>
+  <div class="mb-2 row">
+    <label for="exampleFormControlTextarea1" class="form-label col-sm-2 bold">Body:</label>
+    <div class="col-sm-10">
+      <div class="summernote" id='email_template'></div>
+    </div>
+  </div>
+  <div class="mb-2 row">
+    <label for="formFile" class="form-label col-sm-2 bold">Attachments:</label>
+    <div class="col-sm-10">
+      <form action="#" class="dropzone mt-2" id="email_attachments">
+        <div class="fallback">
+          <input id="attachments" type="file" name="file" multiple>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="mb-2 row">
+    <label for="inputPassword" class="bold col-sm-2 col-form-label">Generate Logs: <b style="color: red;">*</b></label>
+    <div class="col-sm-10">
+      <div class="form-control" style="height:70px; background-color: #e8e5e5;">
+        <div class="form-check">
+          <input value="Yes" class="form-check-input" type="radio" name="generatelogs" id="generatelogs">
+          <label class="form-check-label" for="generatelogs">
+            Yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input value="No" class="form-check-input" type="radio" name="generatelogs" id="generatelogs">
+          <label class="form-check-label" for="generatelogs">
+            No
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid gap-2 col-2 mx-auto">
+      <button class="btn btn-primary mt-3" style="background-color: #ec6d00; border-color: #ec6d00 !important;"
+        onclick="Send_Email()">Send Email</button>
+    </div>
+  </div>
